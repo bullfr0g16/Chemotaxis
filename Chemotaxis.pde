@@ -1,16 +1,3 @@
- //declare bacteria variables here   
-// void setup()   
-// {     
- 	//initialize bacteria variables here   
-// }   
-// void draw()   
- //{    
- 	//move and show the bacteria   
- //}  
- //class Bacteria    
- //{     
- 	//lots of java!   
- //}
 Bac[] dots;
 void setup() {
   size(300, 300);
@@ -27,12 +14,13 @@ void draw() {
   }
 }
 class Bac {
-  int myX, myY;
+  int myX, myY, myColor;
   Bac() {
     int x=150+(int)(Math.random()*50);
     int y=150+(int)(Math.random()*50);
     myX=x;
     myY=y;
+    myColor=color(170,150,200);
   }
   void move() {
     if(mouseX>myX)
@@ -45,7 +33,7 @@ class Bac {
       myY=myY+(int)(Math.random()*4)-2;
   }
   void show() {
-    fill(200,215,150);
+    fill(myColor);
     ellipse(myX, myY, 20, 20);
   }
 }
