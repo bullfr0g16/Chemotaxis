@@ -16,8 +16,8 @@ void draw() {
 class Bac {
   int myX, myY, myColor;
   Bac() {
-    int x=150+(int)(Math.random()*50);
-    int y=150+(int)(Math.random()*50);
+    int x=150+(int)(Math.random()*50)-25;
+    int y=150+(int)(Math.random()*50)-25;
     myX=x;
     myY=y;
     myColor=color(170,150,200);
@@ -37,3 +37,10 @@ class Bac {
     ellipse(myX, myY, 20, 20);
   }
 }
+void mousePressed(){
+    fill(0);
+    rect(0,0,300,300); 
+    for (int i = 0; i < dots.length; i++) {
+      dots[i] = new Bac();
+     }
+  }
